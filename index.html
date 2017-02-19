@@ -3,6 +3,9 @@
 	<head>
         <!-- Content Type Meta tag -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="icon.png" type="image/png" />
         
         <!--Responsive Viewport Meta tag-->
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -40,20 +43,20 @@
 
         <div id="alert-modal" class="modal">
             <div class="modal-content">
-                <p></p>
+                <p style="font-size: 14px;"></p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" style="font-size: 15px;">Ok</a>
             </div>
         </div>
 
         <div id="delete-todo-confirm-modal" class="modal">
             <div class="modal-content" style="padding: 20px 10px; text-align: center;">
-                <p>Do you really want to delete todo ?</p>
+                <p style="font-size: 14px;">Do you really want to delete todo ?</p>
             </div>
             <div class="modal-footer">
-                <a href="#" class="waves-effect waves-red btn-flat" onclick="$('#delete-todo-confirm-modal').closeModal(); return false;">Cancel</a>
-                <a href="#" class="waves-effect waves-green btn-flat" id="delete-todo-yes">Yes</a
+                <a href="#" class="waves-effect waves-red btn-flat" id="delete-todo-cancel" style="font-size: 15px;">Cancel</a>
+                <a href="#" class="waves-effect waves-green btn-flat" id="delete-todo-yes" style="font-size: 15px;">Yes</a
             </div>
         </div>
 
@@ -72,12 +75,12 @@
         </script>
 
 		<!-- JavaScripts -->
-        <script>
+        <!--<script>
             var require={
                 deps:["resources/js/main.js"]  
             };
-        </script>
-        <script src="resources/js/lib/require.min.js"></script>
+        </script>-->
+        <script data-main="resources/js/main" src="resources/js/lib/require.min.js"></script>
         
 	</body>
 </html>

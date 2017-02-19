@@ -88,7 +88,6 @@ define([
                 var name = liParent.find('span.todo-name').text();
                 self.domEl.find('#delete-todo-yes').attr('data-name', name);
                 self.domEl.find('#delete-todo-confirm-modal').openModal();
-                console.log(obj);
             });           
 
             this.domEl.off('click', '#delete-todo-yes').on('click', '#delete-todo-yes', function() {
@@ -96,9 +95,15 @@ define([
                 var obj = {
                     name: name
                 };
-                console.log(obj);
+    
                 self.deleteTodoItem.notify(obj);
                 self.domEl.find('#delete-todo-confirm-modal').closeModal();
+                return false;
+            });
+
+            this.domEl.off('click', '#delete-todo-cancel').on('click', '#delete-todo-cancel', function() {
+                self.domEl.find('#delete-todo-confirm-modal').closeModal(); 
+                return false;
             });
         },
 
