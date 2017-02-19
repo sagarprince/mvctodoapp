@@ -71,6 +71,7 @@ define(['event'], function(Event) {
         addTodoItem: function(todoItem) {
             this.items.push(todoItem);
             this.itemAdded.notify();
+            this.saveIntoStorage();
         },
 
         /**
